@@ -1,0 +1,140 @@
+#app {
+  .hero-wrapper{
+    height: 100vh;
+    .background{
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+          background: radial-gradient(red, #a500ff, black, yellow, green);
+      background-size: 400%;
+      background-position-x: 50%;
+      animation: scroll 10s ease-in 5s infinite;
+}
+    }
+    .sidebar{
+      height: auto;
+      height: 15%;
+      width: 100%;
+      background: radial-gradient(#00800000, black);
+      background-size: 3px 3px;
+    }
+  .hero {
+
+    background: radial-gradient(#4c4c4c87, black),linear-gradient(#333232, black);
+    display: flex;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+
+    .circle-wrapper {
+      height: 600px;
+      width: 495px;
+      left: 56px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      .circle {
+        height: 100%;
+        width: 100%;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: absolute;
+        transform-origin: center;
+        border-radius: 50%;
+        animation: fadec 3s ease-in forwards;
+
+        &.c1 {
+          background: url(".././img/circle1.png");
+          transform-origin: 53% 50%;
+        }
+
+        &.c2 {
+          background: url(".././img/circle2.png");
+          transform-origin: 53% 50%;
+        }
+
+        &.c3 {
+          background: url(".././img/circle3.png");
+          transform-origin: 53% 50%;
+        }
+
+        &.c4 {
+          background: url(".././img/circle4.png");
+          transform-origin: 53% 50%;
+        }
+
+        &.c5 {
+          background: url(".././img/circle5.png");
+          transform-origin: 53% 50%;
+        }
+
+        &.c6 {
+          background: url(".././img/circle6.png");
+          transform-origin: 53% 50%;
+        }
+
+        &.c7 {
+          background: url(".././img/circle7.png");
+          transform-origin: 53% 50%;
+        }
+      }
+    }
+
+    .title {
+      z-index: 2;
+      position: absolute;
+      font-weight: 100;
+      text-shadow: #000000 0 13px 9px, #00000000 1px 0 12px, #000000 0 0 20px;
+      display: inline-flex;
+      opacity: 1;
+      justify-content: center;
+      max-width: 1400px;
+          font-size: 10rem;
+          color: white;
+      h2:nth-child(2){
+        animation: fade 1s  cubic-bezier(1, 1.55, 1, 0.71) 1.9s forwards;
+              opacity: 0;
+      }
+      h2 {
+
+        text-transform: uppercase;
+        font-family: 'Miriam Libre', sans-serif;
+        padding: 50px;
+      }
+    }
+  }
+
+}
+
+@keyframes scroll{
+  0%{
+
+  }
+  100%{
+    filter:hue-rotate(360deg);
+  }
+}
+@keyframes fadec {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

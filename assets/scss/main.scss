@@ -1,177 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Miriam+Libre&display=swap100');
 @import 'reset';
+@import 'hero';
 
 #app {
-  overflow-x: hidden;
   .nav {
+    background: #1f1f1f;
     position: sticky;
-    top: 0;
-    padding: 50px;
-    background: green;
+top: 0;
+overflow: hidden;
 
-    ul {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-  .hero-wrapper{
-    height: 100vh;
-    .background{
-      z-index: -1;
-      height: 100%;
-      width: 100%;
-      background-size: 300% 100%;
-      background-position-x: 0%;
-      position: absolute;
-          background: radial-gradient(red, #a500ff, black, green);
-      background-size: 400%;
-      background-position-x: 0%;
-      animation: scroll 10s ease-in 5s infinite;
-}
-    }
-    .sidebar{
-      height: auto;
-      height: 15%;
-      width: 100%;
-      background: radial-gradient(#00800000, black);
-      background-size: 3px 3px;
-    }
-  .hero {
-
-    background: radial-gradient(#4c4c4c87, black),linear-gradient(#333232, black);
-    color: white;
-    display: flex;
-    height: 70%;
-    justify-content: center;
-    align-items: center;
-    font-size: 10rem;
-    box-shadow: black 0 0 20px 20px;
-
-    .circle-wrapper {
-      height: 600px;
-      width: 500px;
-      //     width: 573px;
-      // height: 373px;
-      left: 56px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-
-      .circle {
-        height: 100%;
-        width: 100%;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        position: absolute;
-        transform-origin: center;
-        border-radius: 50%;
-        animation: fadec 3s ease-in forwards;
-
-        &.c1 {
-          background: url(".././img/circle1.png");
-          transform-origin: 53% 50%;
-          //animation: spin 1s linear infinite;
-        }
-
-        &.c2 {
-          background: url(".././img/circle2.png");
-          transform-origin: 53% 50%;
-         //  animation: spin2 1s linear infinite;
-        }
-
-        &.c3 {
-          background: url(".././img/circle3.png");
-          transform-origin: 53% 50%;
-        //  animation: spin3 1s linear forwards 2;
-        }
-
-        &.c4 {
-          background: url(".././img/circle4.png");
-          //animation: spinning1 1s linear infinite .4s;
-          transform-origin: 53% 50%;
-          //animation: spin2 1s linear infinite;
-        }
-
-        &.c5 {
-          background: url(".././img/circle5.png");
-          //animation: spinning1 1s linear infinite .5s;
-          transform-origin: 53% 50%;
-        //  animation: spin2 1s linear infinite;
-        }
-
-        &.c6 {
-          background: url(".././img/circle6.png");
-          //animation: spinning1 1s linear infinite .6s;
-          transform-origin: 53% 50%;
-          //animation: spin2 1s linear infinite;
-        }
-
-        &.c7 {
-          background: url(".././img/circle7.png");
-          //animation: spinning1 1s linear infinite .7s;
-          transform-origin: 53% 50%;
-        }
-      }
-    }
-
-    .title {
-      z-index: 2;
-      position: absolute;
-      font-weight: 100;
-      text-shadow: #000000 0 13px 9px, #00000000 1px 0 12px, #000000 0 0 20px;
-      display: inline-flex;
-      opacity: 1;
-      justify-content: center;
+    .nav-wrapper {
       max-width: 1400px;
-      //animation: fade 2s ease-in 2.2s forwards;
-      h2:nth-child(2){
-        animation: fade 1s  cubic-bezier(1, 1.55, 1, 0.71) 2.9s forwards;
-              opacity: 0;
-      }
-      h2 {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 80px;
+    }
 
-        text-transform: uppercase;
-        font-family: 'Miriam Libre', sans-serif;
-        padding: 50px;
+    .logo {
+      height: 80px;
+      width: 70px;
+      margin-right: auto;
+
+      .logo-img {
+        background: url(/img/logo.png);
+        height: 82px;
+        width: 146px;
+        position: absolute;
+        background-size: cover;
+        border-radius: 50%;
+        background-position: center;
+        transform-origin: 53% 50%;
       }
     }
-  }
 
-}
 
-@keyframes scroll{
-  25%{
-      background-position-x: 0%;
-  }
-  50%{
-      background-position-x: 100% , 100%;
-  }
-  75%{
-    background-position: 100% 0%;
-  }
-  100%{
-    filter:hue-rotate(360deg);
-  }
-}
-@keyframes fadec {
-  from {
-    opacity: 0;
-  }
+      .menu {
+        display: flex;
+        flex-direction: row;
+        letter-spacing: .2rem;
+        height: 100%;
+        :last-child{
+          margin-right: 0;
+        }
+        li {
+          color: white;
+          margin: 0 20px;
+          padding: 0 20px;
+display: flex;
+align-items: center;
+        }
 
-  to {
-    opacity: 1;
-  }
-}
+      }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }

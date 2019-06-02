@@ -35,7 +35,7 @@ $(document).ready(function() {
 	}
 
 	function circle1(index, num = 1, reverse) {
-		if (Math.abs(startingDegArr[index] / 360) === 4) {
+		if (Math.abs(startingDegArr[index] / 360) === 3) {
 			if (index === 6) {
 				clearInterval(spinInterval);
 			}
