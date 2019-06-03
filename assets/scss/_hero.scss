@@ -6,12 +6,12 @@
       height: 100%;
       width: 100%;
       position: absolute;
-          background: radial-gradient(red, #a500ff, black, yellow, green);
+      background: radial-gradient(red, #a500ff, black, yellow, green);
       background-size: 400%;
       background-position-x: 50%;
       animation: scroll 10s ease-in 5s infinite;
-}
-    }
+      }
+      }
     .sidebar{
       height: auto;
       height: 15%;

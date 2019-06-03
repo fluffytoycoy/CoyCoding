@@ -2,6 +2,11 @@
 @import 'reset';
 @import 'hero';
 
+
+.container{
+  max-width: 1400px;
+}
+
 #app {
   .nav {
     background: #1f1f1f;
@@ -10,7 +15,7 @@ top: 0;
 overflow: hidden;
 
     .nav-wrapper {
-      max-width: 1400px;
+
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -49,9 +54,31 @@ overflow: hidden;
           padding: 0 20px;
           display: flex;
           align-items: center;
-              cursor: pointer;
+          cursor: pointer;
+          position: relative;
+          .hover-bg{
+            background: radial-gradient(#00800000, black);
+            background-size: 3px 3px;
+            position: absolute;
+            height: 100%;
+            width: 135px;
+            left: 0px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+          }
+          a{
+            min-width: 95px;
+            text-align: center;
+            z-index: 1;
+            transition: box-shadow 1s ease-in-out 1s;
+          }
           &:hover{
-            background:blue;
+            .hover-bg{
+              opacity: 1;
+            }
+            a{
+              text-shadow: white 0px 0px 20px;
+            }
           }
         }
 
