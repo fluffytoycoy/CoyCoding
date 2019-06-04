@@ -1,0 +1,90 @@
+#app {
+  #skills {
+    margin-bottom: 120px;
+
+    .container {
+      .title {
+        .line {}
+
+        h2 {}
+      }
+
+      .min-wrapper {
+        .skills-grid {
+          grid-template-rows: 300px 300px;
+          grid-template-columns: 1fr 1fr 1fr;
+          display: grid;
+          grid-gap: 20px;
+          margin: 120px 20px 0;
+
+          .skill {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .skill-wrapper {
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 50%;
+              font-size: 2rem;
+              text-shadow: black 0 9px 11px;
+              color: #eaeaea;
+              &:after {
+                content: '';
+                display: block;
+                padding-top: 100%;
+              }
+            }
+
+            &.html {
+              .skill-wrapper{
+                border: #8a91d8 solid;
+              }
+              font-size: 2rem;
+              text-shadow: black 0 9px 11px;
+              color: #eaeaea;
+            }
+
+            &.sql {
+              .skill-wrapper{
+                border: #ff4400 solid;
+              }
+            }
+            &.css{
+              .skill-wrapper{
+                border: yellow solid;
+              }
+              :nth-child(2){
+                margin-left: 10px;
+              }
+              :nth-child(4){
+                margin-left: 10px;
+              }
+            }
+            &.js{
+              .skill-wrapper{
+                border: #8b0000 solid;
+
+              }
+
+            }
+            &.git{
+              .skill-wrapper{
+                    border: #a252ff solid;
+              }
+
+            }
+            &.node{
+              .skill-wrapper{
+                    border: #129400 solid;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
