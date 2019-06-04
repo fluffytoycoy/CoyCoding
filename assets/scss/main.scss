@@ -52,6 +52,12 @@ body {}
 
           .project {
             border: green solid;
+            padding: 20px;
+            .project1{
+              background: url('https://s3.envato.com/files/56951185/40.590x300.JPG');
+              background-size:cover;
+              background-repeat: no-repeat;
+            }
           }
         }
       }
