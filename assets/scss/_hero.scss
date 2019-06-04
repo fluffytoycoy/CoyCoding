@@ -1,7 +1,11 @@
 #app {
-  .hero-wrapper{
+  #hero {
     height: 100vh;
-    .background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .background {
       z-index: -1;
       height: 102%;
       // HACK: I screwed something up here and have to have 102% height;
@@ -11,32 +15,105 @@
       background-size: 400%;
       background-position-x: 50%;
       animation: scroll 15s ease-in 5s infinite;
-      }
-      }
-    .sidebar{
-      height: auto;
-      height: 15%;
-      width: 100%;
-      background: radial-gradient(#00800000, black);
-      background-size: 3px 3px;
     }
-  .hero {
 
-    background: radial-gradient(#4c4c4c87, black),linear-gradient(#333232, black);
+
+  .sidebar {
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(#00800000, black);
+    background-size: 3px 3px;
+    position: absolute;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+
+    .down-btn-circle {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: #b0aeae9e solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff33;
+      cursor: pointer;
+      animation: float 2s ease-in-out infinite;
+
+      .fas {
+        font-size: 2rem;
+        color: #b0aeae;
+        transition: all 0.5s linear;
+      }
+
+      &:hover {
+        .fas {
+          color: white;
+          text-shadow: white 0 0 10px;
+        }
+      }
+    }
+  }
+
+  .hero {
+    width: 100%;
+    background: radial-gradient(#84848487, #070707),linear-gradient(#333232, black);
+    display: flex;
+    position: relative;
     height: 70%;
     justify-content: center;
     align-items: center;
 
+    .star {
+      display: flex;
+      opacity: 0;
+
+      .fas {
+        margin-right: 10px;
+        font-size: 0.5rem;
+      }
+      position: absolute;
+      align-items: center;
+      color: white;
+
+      &.html {
+        left: 20%;
+        top: 20%;
+        animation: star-fade 3s ease-in 3s infinite alternate;
+      }
+
+      &.css {
+        left: 45%;
+        top: 30%;
+        animation: star-fade 3s ease-in 10s infinite alternate;
+      }
+
+      &.js {
+        left: 10%;
+        top: 70%0%;
+        animation: star-fade 3s ease-in 7s infinite alternate;
+      }
+      &.node{
+        left: 65%;
+        top: 70%;
+        animation: star-fade 3s ease-in 6s infinite alternate;
+      }
+      &.sql{
+        left: 80%;
+        top: 75%;
+        animation: star-fade 3s ease-in 10s infinite alternate;
+      }
+    }
+
     .circle-wrapper {
       height: 600px;
       width: 495px;
-      left: 56px;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-
 
       .circle {
         height: 100%;
@@ -95,14 +172,13 @@
       opacity: 1;
       justify-content: center;
       max-width: 1400px;
-          font-size: 10rem;
-          color: white;
-      h1:nth-child(2){
-        animation: fade 1s  cubic-bezier(1, 1.55, 1, 0.71) 1.9s forwards;
-              opacity: 0;
-      }
-      h1 {
+      font-size: 10rem;
+      color: white;
+      padding: 0;
+      animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.1s forwards;
+      opacity: 0;
 
+      h1 {
         text-transform: uppercase;
         font-family: 'Economica', sans-serif;
         padding: 50px;
@@ -111,14 +187,12 @@
       }
     }
   }
-
 }
+}
+@keyframes scroll {
+  0% {}
 
-@keyframes scroll{
-  0%{
-
-  }
-  100%{
+  100% {
     filter:hue-rotate(360deg);
   }
 }
@@ -131,7 +205,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fade {
   from {
     opacity: 0;
@@ -139,5 +212,32 @@
 
   to {
     opacity: 1;
+  }
+}
+@keyframes star-fade {
+  from {
+    opacity: 0;
+    text-shadow: white 0 0 6px, white 0 0 20px, white 0 0 0px, white 0 0 7px;
+  }
+
+  to {
+    opacity: 1;
+    text-shadow: white 0 0 6px, white 0 0 20px, white 0 0 0px, white 0 0 7px;
+  }
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
+    transform: translatey(-5px);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+    transform: translatey(0px);
   }
 }

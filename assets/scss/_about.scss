@@ -7,30 +7,20 @@
     }
     .container{
       .title{
-        padding-top: 140px;
-        .title-bg{
-          display: flex;
-          justify-content: center;
-          position: relative;
-          align-items: center;
           .line{
                 background: linear-gradient(45deg, blue, red, blue);
           }
           h2{
-                background: white;
+
           }
-        }
-
-
       }
       .about-grid{
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-gap: 10px;
-            grid-column-gap: 50px;
-        padding-top: 140px;
-        padding-bottom: 140px;
+        grid-column-gap: 50px;
+        padding: 120px 0;
         margin: 0 20px;
 
         .text{

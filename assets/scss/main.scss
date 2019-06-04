@@ -5,9 +5,13 @@
 @import 'nav';
 @import 'about';
 
+body{
+  background: #1f1f1f;
+}
 .container{
   max-width: 1400px;
 margin: 0 auto;
+background: #d2d2d2;
 }
 
 
@@ -17,28 +21,29 @@ margin: 0 auto;
   justify-content: center;
   align-items: center;
   display: flex;
+  padding-top: 120px;
   .line{
     position: absolute;
         width: 100%;
         background: red;
         height: 12px;
         z-index: 0;
-        border-radius: 50%;
   }
   h2{
     font-size: 4rem;
     padding: 0px 20px;
     text-transform: uppercase;
     z-index: 2;
+    background: #d2d2d2;
   }
 }
 
 #app{
   #skills{
-    margin-bottom: 140px;
+    margin-bottom: 120px;
     .container{
       .title{
-    margin-bottom: 140px;
+    margin-bottom: 120px;
           .line{
           }
           h2{
