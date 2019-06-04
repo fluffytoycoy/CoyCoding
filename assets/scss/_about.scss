@@ -28,11 +28,13 @@
 
         .text{
           grid-row: 1/3;
-        background: #eeeeee;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 30px;
+        border: #8a91d8 solid;
+text-shadow: black 0 9px 11px;
+color: white;
           h3{
             font-size: 3rem;
             text-align: center;
@@ -62,9 +64,8 @@ b{
           display: flex;
           height: 300px;
           justify-content: center;
-          background: #ad0052;
           align-items: center;
-          box-shadow: inset #fafafa 0 0 20px;
+          border: #8b0000 solid;
           .picture2{
             height: 90%;
             width: 90%;
