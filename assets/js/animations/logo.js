@@ -1,10 +1,10 @@
 var startingDegArr = [200, 180, 160, 140, 120, 100, 80];
 var index = 0;
 const numOfCircles = $('.circle').length;
-
+var spinInterval;
 export const Logo = {
 	initLogoSpin: function() {
-		var spinInterval = setInterval(spin, 1);
+		spinInterval = setInterval(spin, 1);
 	}
 };
 

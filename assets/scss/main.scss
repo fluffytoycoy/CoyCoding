@@ -7,7 +7,10 @@
 @import 'skills';
 @import 'main-global';
 
-body {}
+body {
+  text-shadow: black 0 9px 11px;
+  color: white;
+}
 
 #footer {
   .footer-wrapper {
@@ -53,14 +56,114 @@ body {}
           .project {
             border: green solid;
             padding: 20px;
-            .project1{
-              background: url('https://s3.envato.com/files/56951185/40.590x300.JPG');
-              background-size:cover;
+
+            .project1 {
+              background: url("https://s3.envato.com/files/56951185/40.590x300.JPG");
+              background-size: cover;
               background-repeat: no-repeat;
             }
           }
         }
       }
+    }
+  }
+}
+
+#app {
+  #pop-up {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: white;
+    z-index: 100;
+    opacity: 0;
+    width: 0%;
+    &.visable{
+      opacity: 1;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 100%;
+      background: transparent;
+
+      .project-info {
+        background: #1f1f1f;
+        height: 80%;
+        width: 100%;
+        padding: 20px;
+
+        .pop-up-grid {
+          grid-template-columns: 1fr 2fr;
+          grid-template-rows: 100%;
+          display: grid;
+          height: 100%;
+          width: 100%;
+          grid-column-gap: 20px;
+
+          .close-btn {
+            color: white;
+            position: absolute;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 5;
+          }
+
+
+          .project-img {}
+
+          .project-details {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            color: white;
+            position: relative;
+            h2 {
+              padding: 40px 0 0;
+              font-size: 2rem;
+            }
+            .info{
+              padding: 40px 10%;
+
+
+              p {
+                font-size: 1rem;
+                line-height: 2rem;
+              }
+              .skills{
+                padding: 20px 0;
+                li{
+
+                  display: flex;
+                  flex-direction: row;
+                  margin: 20px 0;
+                  align-items: center;
+                  .bullet-point{
+                    height: 10px;
+                    margin-right: 20px;
+                    width: 10px;
+                    border-radius: 50%;
+                    background: green;
+                  }
+                }
+
+              }
+            }
+
+
+
+          }
+        }
+      }
+    }
+    .blue{
+      color: blue;
     }
   }
 }
