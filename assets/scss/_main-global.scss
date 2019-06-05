@@ -1,3 +1,10 @@
+body {
+  text-shadow: black 0 9px 11px;
+  color: white;
+  &.pop-up{
+    overflow: hidden;
+  }
+}
 
 .container {
   max-width: 1400px;
@@ -37,12 +44,9 @@
       text-transform: uppercase;
       z-index: 2;
       left: 20px;
-      left: calc(100% - 390px);
       width: 370px;
       text-align: center;
-      border-right: white solid;
-      border-left: white solid;
-      box-sizing: content-box;
+
       transition: left 1.2s ease-out;
       color: #ffffff;
     }
