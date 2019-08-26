@@ -38,7 +38,7 @@
             align-items: center;
             width: 33.33%;
             padding: 20px;
-
+            min-width: 300px;
             .skill-wrapper {
               border-radius: 50%;
               display: flex;
@@ -112,10 +112,15 @@
           display: flex;
           font-size: 2rem;
           transition: all 1s ease-in-out;
+          z-index: 2;
           &.slide-open{
             right: calc(100% - 50px);
-            transform: rotate(180deg);
+
             text-shadow: black 0 -9px 11px;
+            .fas {
+                animation: float-reverse 2s ease-in-out infinite;
+                    transform: rotate(180deg);
+            }
           }
           .fas {
             font-size: 2rem;
@@ -130,7 +135,6 @@
             align-items: center;
             background: #ffffff33;
             cursor: pointer;
-            animation: float 2s ease-in-out infinite;
           }
 
           &:hover {
@@ -140,6 +144,19 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  #app {
+    #skills {
+        .skill{
+          min-width: 140px !important;
+      }
+      .next{
+        align-items: flex-start !important;
       }
     }
   }
