@@ -7,7 +7,6 @@ body {
 }
 
 .container {
-  max-width: 1400px;
   margin: 0 auto;
   background: #1f1f1f;
 
@@ -15,7 +14,6 @@ body {
     position: relative;
     align-items: center;
     display: flex;
-    margin-top: 120px;
     overflow: hidden;
 
     .title-bg {
@@ -53,10 +51,9 @@ body {
   }
 
   .min-wrapper {
-    height: 0;
-    max-height: 850px;
-    height: 110vh;
     overflow: hidden;
     transition: all 1s ease-in;
+    margin: 0 20px;
+        padding: 50px 0;
   }
 }

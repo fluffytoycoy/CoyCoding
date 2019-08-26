@@ -3,10 +3,8 @@
     .title {}
 
     .min-wrapper {
-      max-height: 640px;
-
+      margin: 0 20px;
       .project-wrapper {
-        margin: 120px 0;
 
         .selection-wrapper {
           padding: 20px 0;
@@ -25,21 +23,33 @@
         }
 
         .projects-grid {
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 400px;
-          display: grid;
-          grid-gap: 10px;
-          margin: 0 20px;
-
+          display: flex;
+          max-width: 1400px;
+          margin: 0 auto;
+          flex-wrap: wrap;
+          justify-content: space-around;
           .project {
-            border: green solid;
             padding: 20px;
             cursor: pointer;
-
+            width: 33.33%;
+            display: flex;
+                max-width: 400px;
+            &:after {
+              content: '';
+              display: block;
+              padding-top: 100%;
+            }
+            > div{
+              width: 100%;
+              border: green solid;
+              padding: 20px;
+            }
             .project1 {
-              background: url("https://s3.envato.com/files/56951185/40.590x300.JPG");
+              background: url('https://s3.envato.com/files/56951185/40.590x300.JPG');
               background-size: cover;
               background-repeat: no-repeat;
+              height: 100%;
+              box-shadow: 0 0 10px 0px hsla(0, 0%, 0%, 0.4);
             }
           }
         }
