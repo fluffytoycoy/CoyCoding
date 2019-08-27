@@ -1,49 +1,74 @@
 #app {
   #hero {
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     .background {
       height: 102%;
-      // HACK: I screwed something up here and have to have 102% height;
       width: 100%;
       position: absolute;
+      background: -o-radial-gradient(purple 45%, #0c0c0c 43%, blue);
       background: radial-gradient(purple 45%, #0c0c0c 43%, blue);
       background-size: 400%;
       background-position-x: 50%;
-      animation: scroll 15s ease-in 5s infinite;
+      -webkit-animation: scroll 15s ease-in 5s infinite;
+              animation: scroll 15s ease-in 5s infinite;
     }
 
 
   .sidebar {
     height: 100%;
     width: 100%;
-    background: radial-gradient(#00800000, black);
+        background: -o-radial-gradient(rgba(0, 128, 0, 0), black);
+        background: radial-gradient(rgba(0, 128, 0, 0), black);
     background-size: 3px 3px;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     justify-content: center;
-    align-items: center;
-    justify-content: center;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 
     .down-btn-circle {
       height: 50px;
       width: 50px;
       border-radius: 50%;
       border: #b0aeae9e solid;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       background: #ffffff33;
       cursor: pointer;
-      animation: float 2s ease-in-out infinite;
+      -webkit-animation: float 2s ease-in-out infinite;
+              animation: float 2s ease-in-out infinite;
 
       .fas {
         font-size: 2rem;
         color: #b0aeae;
+        -webkit-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
         transition: all 0.5s linear;
       }
 
@@ -58,14 +83,24 @@
 
   .hero {
     width: 100%;
-    background: radial-gradient(#84848487, #070707),linear-gradient(#333232, black);
+    background: radial-gradient(rgba(132, 132, 132, 0.5), rgb(7, 7, 7)),-webkit-gradient(linear, left top, left bottom, from(rgb(51, 50, 50)), to(rgb(0, 0, 0)));
+    background: -o-radial-gradient(rgba(132, 132, 132, 0.5), rgb(7, 7, 7)),-o-linear-gradient(rgb(51, 50, 50), rgb(0, 0, 0));
+    background: radial-gradient(rgba(132, 132, 132, 0.5), rgb(7, 7, 7)),linear-gradient(rgb(51, 50, 50), rgb(0, 0, 0));
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     height: 70%;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     .star {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       opacity: 0;
 
@@ -74,35 +109,42 @@
         font-size: 0.5rem;
       }
       position: absolute;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       color: white;
 
       &.html {
         left: 20%;
         top: 20%;
-        animation: star-fade 3s ease-in 3s infinite alternate;
+        -webkit-animation: star-fade 3s ease-in 3s infinite alternate;
+                animation: star-fade 3s ease-in 3s infinite alternate;
       }
 
       &.css {
         left: 45%;
         top: 30%;
-        animation: star-fade 3s ease-in 10s infinite alternate;
+        -webkit-animation: star-fade 3s ease-in 10s infinite alternate;
+                animation: star-fade 3s ease-in 10s infinite alternate;
       }
 
       &.js {
         left: 10%;
         top: 70%0%;
-        animation: star-fade 3s ease-in 7s infinite alternate;
+        -webkit-animation: star-fade 3s ease-in 7s infinite alternate;
+                animation: star-fade 3s ease-in 7s infinite alternate;
       }
       &.node{
         left: 65%;
         top: 70%;
-        animation: star-fade 3s ease-in 6s infinite alternate;
+        -webkit-animation: star-fade 3s ease-in 6s infinite alternate;
+                animation: star-fade 3s ease-in 6s infinite alternate;
       }
       &.sql{
         left: 80%;
         top: 75%;
-        animation: star-fade 3s ease-in 10s infinite alternate;
+        -webkit-animation: star-fade 3s ease-in 10s infinite alternate;
+                animation: star-fade 3s ease-in 10s infinite alternate;
       }
     }
 
@@ -110,9 +152,15 @@
       height: 600px;
       width: 495px;
       position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
 
       .circle {
         height: 100%;
@@ -121,43 +169,60 @@
         background-repeat: no-repeat !important;
         background-size: cover !important;
         position: absolute;
-        transform-origin: center;
+        -webkit-transform-origin: center;
+            -ms-transform-origin: center;
+                transform-origin: center;
         border-radius: 50%;
-        animation: fadec 3s ease-in forwards;
+        -webkit-animation: fadec 3s ease-in forwards;
+                animation: fadec 3s ease-in forwards;
 
         &.c1 {
           background: url(".././img/circle1.png");
-          transform-origin: 53% 50%;
+          -webkit-transform-origin: 53% 50%;
+              -ms-transform-origin: 53% 50%;
+                  transform-origin: 53% 50%;
         }
 
         &.c2 {
           background: url(".././img/circle2.png");
-          transform-origin: 53% 50%;
+          -webkit-transform-origin: 53% 50%;
+              -ms-transform-origin: 53% 50%;
+                  transform-origin: 53% 50%;
         }
 
         &.c3 {
           background: url(".././img/circle3.png");
-          transform-origin: 53% 50%;
+          -webkit-transform-origin: 53% 50%;
+              -ms-transform-origin: 53% 50%;
+                  transform-origin: 53% 50%;
         }
 
         &.c4 {
           background: url(".././img/circle4.png");
-          transform-origin: 53% 50%;
+          -webkit-transform-origin: 53% 50%;
+              -ms-transform-origin: 53% 50%;
+                  transform-origin: 53% 50%;
         }
 
         &.c5 {
           background: url(".././img/circle5.png");
-          transform-origin: 53% 50%;
+          -webkit-transform-origin: 53% 50%;
+              -ms-transform-origin: 53% 50%;
+                  transform-origin: 53% 50%;
         }
 
         &.c6 {
           background: url(".././img/circle6.png");
-          transform-origin: 53% 50%;
+          -webkit-transform-origin: 53% 50%;
+              -ms-transform-origin: 53% 50%;
+                  transform-origin: 53% 50%;
         }
 
         &.c7 {
           background: url(".././img/circle7.png");
-          transform-origin: 53% 50%;
+          -webkit-transform-origin: 53% 50%;
+              -ms-transform-origin: 53% 50%;
+                  transform-origin: 53% 50%;
         }
       }
     }
@@ -167,15 +232,20 @@
       position: absolute;
       font-weight: 100;
       text-shadow: #000000 0 13px 9px, #00000000 1px 0 12px, #000000 0 0 20px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       opacity: 1;
-      justify-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       max-width: 1400px;
       font-size: 10rem;
       color: white;
       margin: 0;
       padding: 0;
-      animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.1s forwards;
+      -webkit-animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.1s forwards;
+              animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.1s forwards;
       opacity: 0;
 
       h1 {
@@ -189,14 +259,64 @@
   }
 }
 }
+
+
+@media only screen and (max-width: 1024px){
+  #app {
+    #hero {
+      overflow: hidden;
+      .hero .title h1 {
+        font-size: 5rem; padding: 10px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 724px){
+  #app #hero .hero .title h1 { font-size: 3rem;}
+}
+
+
+
+@-webkit-keyframes scroll {
+  0% {}
+
+  100% {
+    -webkit-filter:hue-rotate(360deg);
+            filter:hue-rotate(360deg);
+  }
+}
+
+
+
 @keyframes scroll {
   0% {}
 
   100% {
-    filter:hue-rotate(360deg);
+    -webkit-filter:hue-rotate(360deg);
+            filter:hue-rotate(360deg);
+  }
+}
+@-webkit-keyframes fadec {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 @keyframes fadec {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
   from {
     opacity: 0;
   }
@@ -214,6 +334,17 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes star-fade {
+  from {
+    opacity: 0;
+    text-shadow: white 0 0 6px, white 0 0 20px, white 0 0 0px, white 0 0 7px;
+  }
+
+  to {
+    opacity: 1;
+    text-shadow: white 0 0 6px, white 0 0 20px, white 0 0 0px, white 0 0 7px;
+  }
+}
 @keyframes star-fade {
   from {
     opacity: 0;
@@ -225,19 +356,47 @@
     text-shadow: white 0 0 6px, white 0 0 20px, white 0 0 0px, white 0 0 7px;
   }
 }
-@keyframes float {
+@-webkit-keyframes float {
   0% {
-    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
-    transform: translatey(0px);
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+            box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
 
   50% {
-    box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
-    transform: translatey(-5px);
+    -webkit-box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
+    -webkit-transform: translatey(-5px);
+            transform: translatey(-5px);
   }
 
   100% {
-    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
-    transform: translatey(0px);
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+            box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+@keyframes float {
+  0% {
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+            box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+
+  50% {
+    -webkit-box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
+    -webkit-transform: translatey(-5px);
+            transform: translatey(-5px);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+            box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
 }

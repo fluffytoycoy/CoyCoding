@@ -10,8 +10,8 @@
 @import 'global-animations';
 
 #app{
-  background: linear-gradient(#1f1f1f 32%, #1f1f1ff2, #1f1f1f 82%),url(/img/background.png);
-background-size: cover;
+      background: linear-gradient(rgb(31, 31, 31) 32%, rgba(31, 31, 31, 0.95), rgb(31, 31, 31) 82%),url(/img/background.png);
+  background-size: cover;
 }
 
 body {

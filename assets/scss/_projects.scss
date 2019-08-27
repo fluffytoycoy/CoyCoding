@@ -23,151 +23,35 @@
         }
 
         .projects-grid {
-          display: flex;
           max-width: 1400px;
           margin: 0 auto;
-          flex-wrap: wrap;
-          justify-content: space-around;
           .project {
-            padding: 20px;
-            cursor: pointer;
-            width: 33.33%;
             display: flex;
-                max-width: 400px;
-            &:after {
-              content: '';
-              display: block;
-              padding-top: 100%;
-            }
-            > div{
+            margin: 20px;
+            align-items: flex-start;
+            .square{
               width: 100%;
               border: green solid;
-              padding: 20px;
-            }
-            .project1 {
-              background: url('https://s3.envato.com/files/56951185/40.590x300.JPG');
-              background-size: cover;
-              background-repeat: no-repeat;
-              height: 100%;
-              box-shadow: 0 0 10px 0px hsla(0, 0%, 0%, 0.4);
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-#app {
-  #pop-up {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-        background: #c5c5c5cf;
-    z-index: 100;
-    //opacity: 0;
-    width: 0%;
-    overflow: scroll;
-
-    &.visable{
-      opacity: 1;
-      width: 100%;
-      transition: opacity .5s ease-in;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      height: 100%;
-      background: transparent;
-          left: 9px;
-
-      .project-info {
-        background: #1f1f1f;
-        height: 80%;
-        width: 100%;
-        padding: 20px;
-
-
-        .pop-up-grid {
-          grid-template-columns: 1fr 2fr;
-          grid-template-rows: 100%;
-          display: grid;
-          height: 100%;
-          width: 100%;
-          grid-column-gap: 20px;
-
-          .close-btn {
-            color: white;
-            position: absolute;
-            right: 20px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 5;
-          }
-
-
-          .project-img {
-
-          }
-
-          .project-details {
-            display: flex;
-            flex-direction: column;
-            text-transform: uppercase;
-            color: white;
-            position: relative;
-            justify-content: center;
-            h2 {
-              font-size: 2rem;
-            }
-            .info{
-              padding: 40px 10%;
-
-
-              p {
-                font-size: 1rem;
-                line-height: 2rem;
-              }
-              .skills{
-                padding: 20px 0;
-                li{
-
-                  display: flex;
-                  flex-direction: row;
-                  margin: 20px 0;
-                  align-items: center;
-                  .bullet-point{
-                    height: 10px;
-                    margin-right: 20px;
-                    width: 10px;
-                    border-radius: 50%;
-                    background: green;
-                  }
+              max-width: 351px;
+              position: relative;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              .img-wrapper{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                height: 100%;
+                img{
+                  width: 100%;
+                  padding: 20px;
                 }
-
               }
             }
-            .project-btns{
-              display: flex;
-              justify-content: space-around;
-              margin: 0px 40px;
-              div{
-                padding: 10px 20px;
-    background: red;
-              }
-            }
-
-
           }
         }
       }
-    }
-    .blue{
-      color: #8a91d8;
     }
   }
 }

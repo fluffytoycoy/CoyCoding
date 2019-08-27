@@ -1,54 +1,57 @@
 #app {
   #skills {
-
     .container {
-
       .min-wrapper {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+
         .skills-grid {
           display: flex;
           max-width: 1400px;
           margin: 0 auto;
           flex-wrap: wrap;
-          justify-content: space-around;
+          justify-content: space-between;
           width: 100%;
           transition: 1s all ease-in-out;
-          &.skill-slide-1{
-            &.slide-closed{
+
+          &.skill-slide-1 {
+            &.slide-closed {
               transform: translate(-150%, 0);
               opacity: 0;
             }
           }
 
-          &.skill-slide-2{
+          &.skill-slide-2 {
             position: absolute;
             transform: translate(150%, 0);
             opacity: 0;
-            &.slide-open{
+
+            &.slide-open {
               transform: translate(0, 0);
               opacity: 1;
             }
           }
+
           .skill {
+            max-width: 351px;
+            padding: 20px;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 33.33%;
-            padding: 20px;
-            min-width: 300px;
+
             .skill-wrapper {
               border-radius: 50%;
-              display: flex;
               justify-content: center;
               align-items: center;
               font-size: 1.5rem;
               text-shadow: black 0 9px 11px;
               color: #eaeaea;
               width: 100%;
-                  max-width: 300px;
+              max-width: 300px;
+
               &:after {
                 content: '';
                 display: block;
@@ -56,54 +59,52 @@
               }
             }
 
+            p {
+              position: absolute;
+              font-size: 2rem;
+            }
+
             &.html {
-              .skill-wrapper{
+              .skill-wrapper {
                 border: #8a91d8 solid;
               }
-              font-size: 2rem;
               text-shadow: black 0 9px 11px;
               color: #eaeaea;
             }
 
             &.sql {
-              .skill-wrapper{
+              .skill-wrapper {
                 border: #ff4400 solid;
               }
             }
-            &.css{
-              .skill-wrapper{
+
+            &.css {
+              .skill-wrapper {
                 border: yellow solid;
               }
-              :nth-child(2){
-                margin-left: 10px;
-              }
-              :nth-child(4){
-                margin-left: 10px;
-              }
             }
-            &.js{
-              .skill-wrapper{
+
+            &.js {
+              .skill-wrapper {
                 border: #8b0000 solid;
-
               }
-
             }
-            &.git{
-              .skill-wrapper{
-                    border: #a252ff solid;
-              }
 
+            &.git {
+              .skill-wrapper {
+                border: #a252ff solid;
+              }
             }
-            &.node{
-              .skill-wrapper{
-                    border: #129400 solid;
-              }
 
+            &.node {
+              .skill-wrapper {
+                border: #129400 solid;
+              }
             }
           }
-
         }
-        .next{
+
+        .next {
           position: absolute;
           height: 100%;
           top: 0;
@@ -113,15 +114,17 @@
           font-size: 2rem;
           transition: all 1s ease-in-out;
           z-index: 2;
-          &.slide-open{
-            right: calc(100% - 50px);
 
+          &.slide-open {
+            right: calc(100% - 50px);
             text-shadow: black 0 -9px 11px;
+
             .fas {
-                animation: float-reverse 2s ease-in-out infinite;
-                    transform: rotate(180deg);
+              animation: float-reverse 2s ease-in-out infinite;
+              transform: rotate(180deg);
             }
           }
+
           .fas {
             font-size: 2rem;
             color: #b0aeae;
@@ -148,15 +151,21 @@
     }
   }
 }
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   #app {
     #skills {
-        .skill{
-          min-width: 140px !important;
+      .skill {
+        padding: 10px !important;
+        min-width: 150px !important;
+        width: 50% !important;
+        p{
+          font-size: 1.5rem !important;
+        }
       }
-      .next{
+
+      .next {
         align-items: flex-start !important;
+        margin-top: 20px;
       }
     }
   }
