@@ -42,7 +42,6 @@ overflow: hidden;
         }
         li {
           color: white;
-          margin: 0 20px;
           padding: 0 20px;
           display: flex;
           align-items: center;
@@ -62,14 +61,14 @@ overflow: hidden;
             min-width: 95px;
             text-align: center;
             z-index: 1;
-            transition: box-shadow 1s ease-in-out 1s;
+            transition: all 1s ease-in-out;
           }
           &:hover{
             .hover-bg{
               opacity: 1;
             }
             a{
-              text-shadow: white 0px 0px 20px;
+              text-shadow: white 0px 0px 10px;
             }
           }
         }

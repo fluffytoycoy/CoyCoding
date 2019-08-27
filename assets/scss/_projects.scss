@@ -5,7 +5,11 @@
     .min-wrapper {
       margin: 0 20px;
       .project-wrapper {
-
+        .more-btn{
+          &.hidden{
+            display: none;
+          }
+        }
         .selection-wrapper {
           padding: 20px 0;
           margin: 0 20px;
@@ -29,6 +33,8 @@
             display: flex;
             align-items: flex-start;
             padding: 20px;
+            transition: all 1s ease-in-out;
+            opacity: 1;
             &:nth-child(even){
               flex-direction: row-reverse;
               .project-info{
@@ -37,6 +43,9 @@
             }
             &:not(:last-child){
               margin-bottom: 100px;
+            }
+            &.adding{
+              opacity: 0;
             }
             .square{
               width: 100%;

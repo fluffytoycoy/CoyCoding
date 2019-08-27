@@ -10,7 +10,7 @@
 @import 'global-animations';
 
 #app{
-      background: linear-gradient(rgb(31, 31, 31) 32%, rgba(31, 31, 31, 0.95), rgb(31, 31, 31) 82%),url(/img/background.png);
+  background: linear-gradient(rgba(9, 9, 9, 0.91), rgba(9, 9, 9, 0.91)),url(/img/background.png);
   background-size: cover;
 }
 

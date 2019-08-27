@@ -69,5 +69,20 @@
     "scrolltrigger-classes": "^0.3.6",
     "webpack-dev-server": "^3.1.14"
   },
-  "description": ""
+  "description": "",
+  "browserslist": {
+  "production": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "ie 11"
+  ],
+  "development": [
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version",
+    "ie 11",
+    "edge"
+  ]
+}
 }
