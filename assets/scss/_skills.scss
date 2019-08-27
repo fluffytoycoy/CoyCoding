@@ -37,11 +37,10 @@
           .skill {
             max-width: 351px;
             padding: 20px;
-            width: 100%;
+            width: 33.33%;
             display: flex;
             justify-content: center;
             align-items: center;
-
             .skill-wrapper {
               border-radius: 50%;
               justify-content: center;
@@ -154,10 +153,12 @@
 @media only screen and (max-width: 768px) {
   #app {
     #skills {
+
       .skill {
         padding: 10px !important;
         min-width: 150px !important;
         width: 50% !important;
+        max-width: 242px !important;
         p{
           font-size: 1.5rem !important;
         }

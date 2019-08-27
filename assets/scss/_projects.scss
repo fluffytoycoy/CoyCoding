@@ -27,8 +27,17 @@
           margin: 0 auto;
           .project {
             display: flex;
-            margin: 20px;
             align-items: flex-start;
+            padding: 20px;
+            &:nth-child(even){
+              flex-direction: row-reverse;
+              .project-info{
+                  margin: 0 20px 0 0;
+              }
+            }
+            &:not(:last-child){
+              margin-bottom: 100px;
+            }
             .square{
               width: 100%;
               border: green solid;
@@ -42,12 +51,18 @@
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                padding: 20px;
                 height: 100%;
                 img{
                   width: 100%;
-                  padding: 20px;
+
+                      box-shadow: rgb(40, 40, 40) 0 0 20px, rgb(31, 31, 31) 0 0 0 20px;
+
                 }
               }
+            }
+            .project-info{
+                margin: 0 0 0 20px;
             }
           }
         }
