@@ -6,6 +6,7 @@
 top: 0;
 overflow: hidden;
     z-index: 100;
+        margin-top: -10px;
     .nav-wrapper {
       background: #1f1f1f;
       margin: 0 auto;
@@ -62,6 +63,8 @@ overflow: hidden;
             text-align: center;
             z-index: 1;
             transition: all 1s ease-in-out;
+            color: white;
+            text-decoration: none;
           }
           &:hover{
             .hover-bg{

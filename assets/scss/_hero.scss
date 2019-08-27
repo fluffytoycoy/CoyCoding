@@ -42,11 +42,9 @@
       height: 50px;
       width: 50px;
       border-radius: 50%;
-      border: #b0aeae9e solid;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #ffffff33;
       cursor: pointer;
       animation: float 2s ease-in-out infinite;
       margin-bottom: 50px;
@@ -250,4 +248,20 @@
     box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
     transform: translatey(0px);
   }
+}
+
+@media only screen and (max-width: 1024px){
+  #app {
+    #hero {
+      overflow: hidden;
+      .hero .title h1 {
+        font-size: 5rem; padding: 10px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 724px){
+  #app #hero .hero .title h1 { font-size: 3rem;}
 }
