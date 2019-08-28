@@ -1,3 +1,11 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-<g><path d="M990,924.4H10L500,75.6L990,924.4z M33.7,910.7h932.5L500,103.1L33.7,910.7z"/></g>
+<svg x="0px" y="0px" opacity=".5" viewBox="0 0 1000 850" fill="#8a91d8" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+  <g xmlns="http://www.w3.org/2000/svg">
+    <title>Layer 1</title>
+    <g id="svg_1">
+      <path id="svg_2" d="m991.176475,585.575206l-980,0l490,-848.8l490,848.8zm-956.3,-13.7l932.5,0l-466.2,-807.6l-466.3,807.6z" />
+    </g>
+    <g id="svg_4">
+      <path id="svg_3" d="m982.941149,1011.459147l-980,0l490,-848.8l490,848.8zm-956.3,-13.7l932.5,0l-466.2,-807.6l-466.3,807.6z" />
+    </g>
+  </g>
 </svg>

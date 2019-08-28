@@ -35,10 +35,10 @@ export default class DOMProjects {
                 </div>
                 <div class="project-btns">
                   <div>
-                    git hub
+                    source code
                   </div>
                   <div>
-                    live site
+                    demo
                   </div>
                 </div>
               </div>
