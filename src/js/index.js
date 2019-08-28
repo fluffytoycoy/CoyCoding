@@ -1,3 +1,5 @@
+import '../scss/main.scss';
+
 import { Logo } from './animations/logo';
 import SkillBtn from './SkillSection/SkillBtn';
 import ProjectSection, { addProject } from './ProjectsSection/ProjectsSection';

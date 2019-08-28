@@ -1,86 +1,142 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackMd5Hash = require('webpack-md5-hash');
+const webpack = require('webpack');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const UglifyJS = require('uglify-es');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const CssUrlRelativePlugin = require('css-url-relative-plugin');
+const glob = require('glob');
 
-const DefaultUglifyJsOptions = UglifyJS.default_options();
-const compress = DefaultUglifyJsOptions.compress;
-for (let compressOption in compress) {
-	compress[compressOption] = false;
-}
-compress.unused = true;
+const IS_DEV = process.env.NODE_ENV === 'dev';
 
-module.exports = env => {
-
-	return {
-		entry: {
-			main: './assets/js/main.js'
-		},
-		output: {
-			path: path.resolve(__dirname, 'public/js/dist'),
-			filename: '[name].js' // '[name].[chunkhash].js' put this if you want to get hashed files to cache bust
-		},
-
-		module: {
-			rules: [
-				{
-					test: /\.js$/,
-					exclude: /node_modules/,
-					use: ['babel-loader', 'prettier-loader']
-				},
-				{
-					test: /\.scss$/,
-					use: [
-						'style-loader',
-						MiniCssExtractPlugin.loader,
-						'css-loader',
-						'sass-loader',
-						'postcss-loader'
-					]
-				}
-			]
-
-		},
-		plugins: [
-			new MiniCssExtractPlugin({
-				filename: 'styles.css' // 'style.[contenthash].css' put this if you want to get hashed files to cache bust
-			}),
-			// new HtmlWebpackPlugin({
-			// 	inject: false,
-			// 	hash: true,
-			// 	template: './assets/index.html',
-			// 	children: false,
-			// 	filename: '../index.html'
-			// }),
-			new WebpackMd5Hash()
-		],
-
-			//Everything above this is okay something below is messing with the require() function;
-
-
-
-		optimization: {
-			splitChunks: {
-				// chunks: 'all',
-				minSize: 0
-			},
-			minimize: true,
-			minimizer: [
-				new UglifyJsPlugin({
-					uglifyOptions: {
-						compress,
-						mangle: false,
-						output: {
-							beautify: env.NODE_ENV !== 'production' ? true : false
-						}
-					}
-				})
-			],
-			usedExports: true,
-			sideEffects: true
-		}
-	};
+const config = {
+  mode: IS_DEV ? 'development' : 'production',
+  devtool: IS_DEV ? 'eval' : 'source-map',
+  entry: './src/js/index.js',
+  output: {
+    filename: 'js/[name].[hash].js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: IS_DEV,
+            },
+          },
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: '[name].[ext]',
+              fallback: 'file-loader',
+              outputPath: 'public/images',
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+              pngquant: {
+                quality: '65-90',
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75,
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'windows.jQuery': 'jquery',
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: './src/public',
+        to: 'public',
+      },
+    ]),
+    new MiniCssExtractPlugin({
+      filename: IS_DEV ? 'css/[name].css' : 'css/[name].[contenthash].css',
+      chunkFilename: 'css/[id].css',
+    }),
+    new webpack.HashedModuleIdsPlugin(),
+    new PreloadWebpackPlugin({
+      include: 'initial',
+    }),
+    new CssUrlRelativePlugin(),
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'src'),
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          chunks: 'initial',
+          name: 'vendor',
+          priority: 10,
+          enforce: true,
+        },
+      },
+    },
+    minimizer: [],
+  },
 };
+
+if (!IS_DEV) {
+  const TerserPlugin = require('terser-webpack-plugin');
+  const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+  config.optimization.minimizer.push(
+    new TerserPlugin(),
+    new OptimizeCSSAssetsPlugin({})
+  );
+}
+
+const files = glob.sync('./src/*.html');
+
+files.forEach(file => {
+  config.plugins.push(
+    new HtmlWebPackPlugin({
+      filename: path.basename(file),
+      template: file,
+      favicon: path.resolve(__dirname, './src/public/icon.ico'),
+      minify: !IS_DEV,
+    })
+  );
+});
+
+module.exports = config;
