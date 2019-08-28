@@ -4,14 +4,15 @@
     ["@babel/env",
       {
         "targets": {
-          "edge": "17",
+          "edge": "18",
           "firefox": "60",
           "chrome": "67",
           "safari": "11.1"
-        }
-      }
+        },
+          useBuiltIns: "usage",
+      },
     ],
-    "@babel/preset-react"
+
   ],
   "plugins": [
     ["@babel/plugin-proposal-decorators", {

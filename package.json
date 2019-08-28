@@ -25,7 +25,7 @@
     "@babel/preset-stage-0": "^7.0.0",
     "@babel/register": "^7.0.0",
     "autoprefixer": "^9.3.1",
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
@@ -64,6 +64,7 @@
     "@babel/plugin-proposal-decorators": "^7.1.6",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-async-to-generator": "^7.1.0",
+    "@babel/polyfill": "^7.4.4",
     "axios": "^0.19.0",
     "localforage": "^1.5.0",
     "scrolltrigger-classes": "^0.3.6",
@@ -71,18 +72,18 @@
   },
   "description": "",
   "browserslist": {
-  "production": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all",
-    "ie 11"
-  ],
-  "development": [
-    "last 1 chrome version",
-    "last 1 firefox version",
-    "last 1 safari version",
-    "ie 11",
-    "edge"
-  ]
-}
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie 11",
+      "Edge >= 18"
+    ]
+  }
 }

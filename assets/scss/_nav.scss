@@ -6,7 +6,7 @@
 top: 0;
 overflow: hidden;
     z-index: 100;
-        margin-top: -10px;
+
     .nav-wrapper {
       background: #1f1f1f;
       margin: 0 auto;
@@ -49,7 +49,7 @@ overflow: hidden;
           cursor: pointer;
           position: relative;
           .hover-bg{
-            background: radial-gradient(#00800000, black);
+            background: radial-gradient(rgba(0, 128, 0, 0), black);
             background-size: 3px 3px;
             position: absolute;
             height: 100%;

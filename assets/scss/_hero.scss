@@ -1,6 +1,6 @@
 #app {
   #hero {
-    height: 101vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,6 @@
     .background-screen {
       z-index: 0;
       height: 100%;
-      // HACK: I screwed something up here and have to have 102% height;
       width: 100%;
       position: absolute;
       background-size: 400%;
@@ -29,7 +28,7 @@
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: radial-gradient(#00800000, black);
+    background: radial-gradient(rgba(0, 128, 0, 0), black);
     background-size: 3px 3px;
     position: absolute;
     display: flex;
@@ -65,8 +64,9 @@
   }
 
   .hero {
+
     width: 100%;
-    background: radial-gradient(#84848487, #070707),linear-gradient(#333232, black);
+    background: radial-gradient(rgba(132, 132, 132, 0.5), hsl(0, 0%, 3%)),linear-gradient(rgb(51, 50, 50), rgb(0, 0, 0));
     display: flex;
     position: relative;
     height: 70%;
