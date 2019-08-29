@@ -16,36 +16,47 @@ export default class DOMProjects {
                 <h2>${project.name}</h2>
                 <div class="info">
                   <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    ${this.getProductDescription(project)}
                   </p>
-                  <ul class="skills">
-                    <li>
-                      <div class="bullet-point"></div>Skill
-                    </li>
-                    <li>
-                      <div class="bullet-point"></div>Skill
-                    </li>
-                    <li>
-                      <div class="bullet-point"></div>Skill
-                    </li>
-                  </ul>
-                  <p>
-                    <b class="blue">Authors Notes: </b>voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                  </p>
+                  <div class="skills">
+										${this.getBulletPointsDOM(project)}
+                  </div>
+									${this.getAuthorsNotes(project)}
                 </div>
                 <div class="project-btns">
-                  <div>
-                    source code
-                  </div>
-                  <div>
-                    demo
-                  </div>
+                  <a target="_blank" href="${project.githubLink}">
+										<div>
+	                    source code
+	                  </div>
+									</a>
+									<a target="_blank" href="${project.siteLink}">
+	                  <div>
+	                    demo
+	                  </div>
+									</a>
                 </div>
               </div>
           </div>
         </div>`;
 		}
 	}
+	getBulletPointsDOM(project){
+		const test = project.bulletPoints.map(skill=>{
+			return `<div class="bullet-point"><i class="fas fa-circle"></i>${skill}</div>`
+		})
+		return test.join('');
+	}
+
+	getProductDescription(project){
+		return project.description;
+	}
+
+	getAuthorsNotes(project){
+		return project.authorsNotes
+		? `<p><b>Authors Notes: </b>${project.authorsNotes}</p>`
+		:	'';
+	}
+
 
 	getRemainingProjectsCount() {
 		return this.projectArr.length;

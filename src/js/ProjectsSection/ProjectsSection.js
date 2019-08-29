@@ -24,7 +24,7 @@ export default class ProjectSection {
 
 	initBtn() {
 		const self = this;
-		$('.more-btn').on('click', () => {
+		$('.more-btn p').on('click', () => {
 			self.addProject();
 		});
 	}
