@@ -1,16 +1,8 @@
 {
-  "name": "bootstrap-webpack-jquery-boilerplate",
+  "name": "CoyCoding",
   "license": "MIT",
   "author": "xxhomey19",
-  "homepage": "https://xxhomey19.github.io/bootstrap-webpack-jquery-boilerplate/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xxhomey19/bootstrap-webpack-jquery-boilerplate/tree/master"
-  },
-  "bugs": {
-    "url": "https://github.com/xxhomey19/bootstrap-webpack-jquery-boilerplate/issues"
-  },
-  "version": "1.6.4",
+  "version": "2.0.0",
   "scripts": {
     "build": "webpack -p --progress --mode production --config webpack.config.js",
     "predeploy": "npm run build",

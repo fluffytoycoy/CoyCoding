@@ -20,8 +20,7 @@
           -ms-grid-columns: 2fr 50px 1fr;
           grid-template-columns: 2fr 1fr;
           -ms-grid-rows: auto 10px auto;
-              grid-template-areas: "text github"
-                               "text linkedin";
+          grid-template-areas: "text github" "text linkedin";
           grid-gap: 10px;
           grid-column-gap: 50px;
           padding: 120px 0;
@@ -39,11 +38,11 @@
             display: flex;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
             -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
             padding: 30px;
             border: #ffff00 solid;
             text-shadow: black 0 9px 11px;
@@ -82,55 +81,58 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            /* height: 300px; */
             max-height: 300px;
             -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
             -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
             border: #8b0000 solid;
             position: relative;
             width: 100%;
             overflow: hidden;
-            &.github{
+
+            &.github {
               -ms-grid-row: 1;
               -ms-grid-column: 3;
               grid-area: github;
             }
-            &.linkedin{
+
+            &.linkedin {
               -ms-grid-row: 3;
               -ms-grid-column: 3;
               grid-area: linkedin;
             }
+
             a {
               position: absolute;
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
               -webkit-box-pack: center;
-                  -ms-flex-pack: center;
-                      justify-content: center;
+              -ms-flex-pack: center;
+              justify-content: center;
               -webkit-box-align: center;
-                  -ms-flex-align: center;
-                      align-items: center;
+              -ms-flex-align: center;
+              align-items: center;
               height: 100%;
               width: 100%;
+
               img {
                 z-index: 1;
                 -webkit-filter: drop-shadow(0px 0px 0px black) drop-shadow(0px 0px 5px black);
-                        filter: drop-shadow(0px 0px 0px black) drop-shadow(0px 0px 5px black);
+                filter: drop-shadow(0px 0px 0px black) drop-shadow(0px 0px 5px black);
                 -webkit-transition: all 0.5s ease-in;
                 -o-transition: all 0.5s ease-in;
                 transition: all 0.5s ease-in;
 
                 &:hover {
                   -webkit-transform: scale(1.1);
-                      -ms-transform: scale(1.1);
-                          transform: scale(1.1);
+                  -ms-transform: scale(1.1);
+                  transform: scale(1.1);
                   -webkit-filter: drop-shadow(0px 0px 5px black) drop-shadow(0px 0px 10px black);
-                          filter: drop-shadow(0px 0px 5px black) drop-shadow(0px 0px 10px black);
+                  filter: drop-shadow(0px 0px 5px black) drop-shadow(0px 0px 10px black);
                 }
               }
             }
@@ -141,8 +143,8 @@
 
               &.reverse {
                 -webkit-transform: rotate(180deg);
-                    -ms-transform: rotate(180deg);
-                        transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
               }
             }
           }
@@ -151,38 +153,40 @@
     }
   }
 }
-
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px) {
   .about-grid {
     -ms-grid-columns: 1fr !important;
     grid-template-columns: 1fr !important;
-    grid-template-areas: "text" "github"
-                     "linkedin" !important;
-    .link-cube{
+    grid-template-areas: "text" "github" "linkedin" !important;
+
+    .link-cube {
       -ms-grid-column: 1 !important;
-      &.linkedin{
-          -ms-grid-row: 4 !important;
-          -ms-grid-column: 1 !important;
+
+      &.linkedin {
+        -ms-grid-row: 4 !important;
+        -ms-grid-column: 1 !important;
       }
-      &.github{
+
+      &.github {
         -ms-grid-row: 5 !important;
       }
     }
-
   }
 }
+@media only screen and (max-width: 767px) {
+  .text {
+    padding: 30px 10px !important;
 
-@media only screen and (max-width: 767px){
-    .text {
-      padding: 30px 10px !important;
-  h3{
-    font-size: 2rem !important;
-  }
-  h4{
-    font-size: 1.5rem !important;
-    margin-right: 0px !important;
+    h3 {
+      font-size: 2rem !important;
     }
-    p{
+
+    h4 {
+      font-size: 1.5rem !important;
+      margin-right: 0 !important;
+    }
+
+    p {
       text-align: center;
     }
   }
