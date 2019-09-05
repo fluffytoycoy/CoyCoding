@@ -24,7 +24,7 @@ export const Projects = [
 			'A Front end site for a digital agency. Done with a team of two through trello one graphic designer and me as the Developer.',
 		bulletPoints: ['React', 'Node.js', 'SASS', 'Trello'],
 		githubLink: 'https://github.com/fluffytoycoy/techLabs',
-		siteLink: 'here'
+		siteLink: 'https://techLabs.coycoding.com/'
 	},
 	{
 		name: 'Chamberlin HVAC',
