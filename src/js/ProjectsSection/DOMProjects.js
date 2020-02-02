@@ -40,6 +40,7 @@ export default class DOMProjects {
         </div>`;
 		}
 	}
+
 	getBulletPointsDOM(project){
 		const test = project.bulletPoints.map(skill=>{
 			return `<div class="bullet-point"><i class="fas fa-circle"></i>${skill}</div>`
@@ -56,7 +57,6 @@ export default class DOMProjects {
 		? `<p><b>Authors Notes: </b>${project.authorsNotes}</p>`
 		:	'';
 	}
-
 
 	getRemainingProjectsCount() {
 		return this.projectArr.length;

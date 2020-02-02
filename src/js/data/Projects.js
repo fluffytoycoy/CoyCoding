@@ -18,6 +18,16 @@ export const Projects = [
 		siteLink: 'http://www.fluffygaming.pro/'
 	},
 	{
+		name: 'Retro Roulette',
+		img: '/public/images/retro_roulette.png',
+		description:
+			'Random game generator built with React, Node.js and Sqllite. Features customizable filters for users and a dashboard with basic crud operations for admins.',
+		bulletPoints: ['React', 'SQL', 'Node.js', 'SASS', 'Material UI'],
+		githubLink: 'https://github.com/fluffytoycoy/retro-roulette',
+		siteLink: 'https://retro-roulette.herokuapp.com/',
+		authorsNotes: '/login for the hidden log in page USER: test, PASSWORD: test'
+	},
+	{
 		name: 'techLabs',
 		img: '/public/images/techLab.png',
 		description:
@@ -36,13 +46,13 @@ export const Projects = [
 		siteLink: 'https://hvac-react-adonis.herokuapp.com/'
 	},
 	{
-		name: 'Retro Roulette',
-		img: '/public/images/retro_roulette.png',
+		name: 'Mike Shannon\'s Grill',
+		img: '/public/images/ms-food.png',
 		description:
-			'Random game generator built with React, Node.js and Sqllite. Features customizable filters for users and a dashboard with basic crud operations for admins.',
-		bulletPoints: ['React', 'SQL', 'Node.js', 'SASS'],
-		githubLink: 'https://github.com/fluffytoycoy/retro-roulette',
-		siteLink: 'https://retro-roulette.herokuapp.com/',
-		authorsNotes: '/login for the hidden log in page USER: test, PASSWORD: test'
+			'A rework of the Mike Shannons Bar and Grill site. Features a custom auth system, backend api for editing of menu items, and an animated 3 column layout desigin for the menu and info sections.',
+		bulletPoints: ['React', 'MySQL', 'Node.js', 'SASS', 'JWT', 'Material UI'],
+		githubLink: 'https://github.com/fluffytoycoy/ms-food',
+		siteLink: 'https://ms-food.coycoding.com/',
+		authorsNotes: '/login for the hidden log in page USER: admin, PASSWORD: test'
 	},
 ];
