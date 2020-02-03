@@ -25,7 +25,7 @@ export const Projects = [
 		bulletPoints: ['React', 'SQL', 'Node.js', 'SASS', 'Material UI'],
 		githubLink: 'https://github.com/fluffytoycoy/retro-roulette',
 		siteLink: 'https://retro-roulette.herokuapp.com/',
-		authorsNotes: '/login for the hidden log in page USER: test, PASSWORD: test'
+		authorsNotes: '/login for the hidden log in page USER: test, PASSWORD: test. This site is hosted on heroku so it may take a second for the server to respond on first load.'
 	},
 	{
 		name: 'techLabs',
@@ -34,7 +34,7 @@ export const Projects = [
 			'A Front end site for a digital agency. Done with a team of two through trello one graphic designer and me as the Developer.',
 		bulletPoints: ['React', 'Node.js', 'SASS', 'Trello'],
 		githubLink: 'https://github.com/fluffytoycoy/techLabs',
-		siteLink: 'https://techLabs.coycoding.com/'
+		siteLink: 'https://techLabs.coycoding.com/',
 	},
 	{
 		name: 'Chamberlin HVAC',
@@ -43,7 +43,8 @@ export const Projects = [
 			'This is a site for Chamberlin HVAC. It was done with react, sass and Node.js on the backend. It uses the google places API for fetching recent reviews and a custom backend API for filtering and displaying products.',
 		bulletPoints: ['React', 'Node.js', 'Google Places API', 'SASS'],
 		githubLink: 'https://github.com/fluffytoycoy/adonis-react-hvac',
-		siteLink: 'https://hvac-react-adonis.herokuapp.com/'
+		siteLink: 'https://hvac-react-adonis.herokuapp.com/',
+				authorsNotes: 'This site is hosted on heroku so it may take a second for the server to respond on first load.'
 	},
 	{
 		name: 'Mike Shannon\'s Grill',
